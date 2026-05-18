@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Builds
+dist
+dist-ssr
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# OS / Editor
+.DS_Store
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# VSCode (permite settings mínimos si los quieres versionar)
+.vscode/*
+!.vscode/extensions.json
+
+# Coverage / cache
+coverage
+*.local
+*.tsbuildinfo
+.eslintcache
+.nyc_output
+
+# Cypress
+/cypress/videos/
+/cypress/screenshots/
+
+# Vitest
+__screenshots__/
+
+# Vite timestamps
+vite.config.*.timestamp-*
+*.timestamp-*-*.mjs
