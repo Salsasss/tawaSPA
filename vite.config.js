@@ -21,7 +21,7 @@ export default defineConfig({
     proxy: {
       // Reenvía todas las peticiones /api/* al backend Django
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://tawaapi.onrender.com',
         changeOrigin: true,
       },
     },
