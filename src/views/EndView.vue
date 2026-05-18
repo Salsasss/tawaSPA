@@ -8,8 +8,9 @@ const router = useRouter()
 const cart = useCartStore()
 const order = useOrderStore()
 
-// Guardar el total antes de limpiar
-const savedTotal = cart.total
+// Guardar el total antes de limpiar, incluyendo propina
+const tipAmount = Math.round(cart.subtotal * (order.tipPercent / 100) * 100) / 100
+const savedTotal = Math.round((cart.subtotal + cart.iva + tipAmount) * 100) / 100
 
 function handleFinish() {
   cart.clear()

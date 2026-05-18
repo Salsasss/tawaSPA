@@ -34,7 +34,7 @@ export const useOrderStore = defineStore("order", {
             const labels = {
                 cash: "Efectivo",
                 card: "Tarjeta",
-                counter: "Pago en Caja",
+                counter: "Transferencia",
             };
             return labels[state.paymentMethod] ?? "";
         },

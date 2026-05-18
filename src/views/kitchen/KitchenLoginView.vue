@@ -21,7 +21,16 @@ async function handleLogin() {
 </script>
 
 <template>
-  <div class="min-h-dvh flex items-center justify-center bg-bg text-text p-4">
+  <div class="relative min-h-dvh flex items-center justify-center bg-bg text-text p-4">
+    <!-- Botón Volver al Inicio -->
+    <button
+      type="button"
+      class="fixed top-6 left-6 z-50 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-md transition hover:bg-slate-50 hover:scale-105 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+      @click="router.push('/welcome')"
+    >
+      ← Volver al Inicio
+    </button>
+
     <!-- Background blobs -->
     <div class="pointer-events-none fixed inset-0 -z-10">
       <div class="absolute -top-32 -right-40 h-80 w-80 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-500/15"></div>
@@ -136,7 +145,7 @@ async function handleLogin() {
                      shadow-xl overflow-hidden bg-muted"
             >
               <img
-                src="/mock/coctel.png"
+                src="/logo.png"
                 alt="Mariscos Tawa"
                 class="h-full w-full object-cover"
               />
@@ -159,7 +168,7 @@ async function handleLogin() {
                    bg-surface/80 px-5 py-2.5 text-xs font-medium text-text-muted shadow-sm"
           >
             <span>🕘</span>
-            <span>Horario: 9am / 6pm</span>
+            <span>Horario: 9:00 am - 6:00 pm</span>
           </div>
         </div>
       </div>

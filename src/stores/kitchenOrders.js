@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { getOrdenes, patchOrden } from "@/services/ordenes.service";
+import { patchDetalleOrden } from "@/services/detalles-orden.service";
 
 /**
  * Kitchen Orders Store
@@ -45,6 +46,7 @@ function mapOrder(o) {
       ? Date.now()  // Estimado; el backend no expone completedAt aún
       : null,
     items: (o.detalles ?? []).map(d => ({
+      id: d.id,
       qty: d.cantidad,
       name: d.producto_detalle?.nombre ?? `Producto #${d.producto}`,
       notes: d.notas ?? "",
@@ -213,13 +215,29 @@ export const useKitchenOrdersStore = defineStore("kitchenOrders", {
     },
 
     /**
-     * Toggle local del ítem (solo UI, no llama al backend).
-     * El marcado real de preparados se haría via patchDetalleOrden().
+     * Toggle local del ítem y persistencia en el backend.
      */
-    toggleItemCompleted(orderId, itemIndex) {
+    async toggleItemCompleted(orderId, itemIndex) {
       const order = this._findOrder(orderId);
       if (!order || !order.items[itemIndex]) return;
-      order.items[itemIndex].completed = !order.items[itemIndex].completed;
+      
+      const item = order.items[itemIndex];
+      const newStatus = !item.completed;
+      
+      // Actualización visual inmediata en la UI (Optimistic UI)
+      item.completed = newStatus;
+      
+      try {
+        if (item.id) {
+          await patchDetalleOrden(Number(item.id), { preparado: newStatus });
+        } else {
+          console.warn("[kitchenOrders] El ítem no tiene un ID de detalle válido para persistir.");
+        }
+      } catch (err) {
+        console.error("[kitchenOrders] Error al actualizar estado preparado del platillo:", err);
+        // Revertir el estado en caso de error
+        item.completed = !newStatus;
+      }
     },
   },
 });

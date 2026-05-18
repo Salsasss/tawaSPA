@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import CategoryTabs from '@/components/menu/CategoryTabs.vue'
 import NoticeBanner from '@/components/menu/NoticeBanner.vue'
 import ProductSection from '@/components/menu/ProductSection.vue'
@@ -15,6 +16,7 @@ const CATEGORY_ICONS = {
 }
 
 // ── Estado reactivo ───────────────────────────────────────────────────────
+const router = useRouter()
 const categories = ref([])
 const products = ref([])
 const active = ref(null)       // Se inicializa con el id de la 1ª categoría
@@ -71,6 +73,16 @@ const sections = computed(() => {
 </script>
 
 <template>
+<!-- Botón Atrás -->
+      <div class="mb-4">
+        <button
+            type="button"
+            class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:scale-[1.02] dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+            @click="router.push('/welcome')"
+        >
+          ← Volver al Inicio
+        </button>
+      </div>
   <div class="card min-h-[calc(100vh-120px)] bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
     <div class="mx-auto w-full max-w-7xl px-4 py-6">
       <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px]">

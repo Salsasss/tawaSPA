@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue'
 import { useOrderStore } from '@/stores/order'
 import { useCurrency } from '@/composables/useCurrency'
 
@@ -9,13 +10,19 @@ const props = defineProps({
 const order = useOrderStore()
 const { mxn } = useCurrency()
 
+const orderTypeLabel = computed(() => {
+  if (order.isDineIn) return '🍽️ Comer Aquí'
+  if (order.isTakeaway) return '🛍️ Para Llevar'
+  return ''
+})
+
 const emit = defineEmits(['finish'])
 </script>
 
 <template>
   <div class="mx-auto max-w-lg">
     <div
-        class="rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm
+        class="relative rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm
                dark:border-slate-800 dark:bg-slate-900/60"
     >
       <!-- Ícono de éxito -->
@@ -51,6 +58,17 @@ const emit = defineEmits(['finish'])
       <div
           class="mx-auto mt-5 flex max-w-xs flex-wrap items-center justify-center gap-3 text-xs"
       >
+
+      <!-- Tipo de orden -->
+      <span
+          v-if="orderTypeLabel"
+          class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50
+                   px-3 py-1.5 font-semibold text-slate-600
+                   dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300"
+      >
+        {{ orderTypeLabel }}
+      </span>
+
         <!-- Método de pago -->
         <span
             v-if="order.paymentLabel"

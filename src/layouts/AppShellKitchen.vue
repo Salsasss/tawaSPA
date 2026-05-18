@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import { useTheme } from "@/composables/useTheme.js";
 import { useKitchenAuthStore } from "@/stores/kitchenAuth.js";
+import logoUrl from "@/assets/logo.png";
 
 const router = useRouter();
 const { isDark, toggleTheme } = useTheme();
@@ -42,8 +43,8 @@ function handleLogout() {
       <div class="flex items-center justify-between px-5 py-3">
         <!-- Left: Brand -->
         <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-xl bg-muted border border-border grid place-items-center">
-            <span class="text-sm font-bold">🦐</span>
+          <div class="h-10 w-10 rounded-xl overflow-hidden bg-muted border border-border grid place-items-center shadow-sm">
+            <img :src="logoUrl" alt="Logo" class="h-full w-full object-contain p-1" />
           </div>
           <div class="leading-tight">
             <div class="text-base font-extrabold tracking-wide">MARISCOS TAWA</div>
@@ -76,7 +77,7 @@ function handleLogout() {
 
     <!-- ── Footer ── -->
     <footer class="flex-shrink-0 border-t border-border bg-surface/60 backdrop-blur">
-      <div class="flex items-center justify-between px-5 py-2 text-xs text-text-muted">
+      <div class="flex items-center justify-between px-5 py-2 text-sm text-text-muted">
         <div class="flex items-center gap-4">
           <span>Estado del Servidor: <span class="text-success font-semibold">Conectado</span></span>
           <span>Versión: 2.4.0</span>

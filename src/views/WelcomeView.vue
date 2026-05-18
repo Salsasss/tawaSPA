@@ -18,17 +18,17 @@ function handleSelect(type) {
 <template>
   <section class="relative min-h-[calc(100vh-2rem)] overflow-hidden">
 
-    <!-- Discrete employee access icon (bottom-left) -->
+    <!-- Employee access button (bottom-left) -->
     <button
       type="button"
-      class="fixed bottom-4 left-4 z-50 h-6 w-6 opacity-[0.12] hover:opacity-[0.25]
-             transition-opacity duration-300 cursor-default"
+      class="fixed bottom-6 left-6 z-50 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-md transition hover:bg-slate-50 hover:scale-105 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
       aria-label="Acceso empleados"
       @click="router.push('/kitchen/login')"
     >
-      <svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full text-text-muted">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
         <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
       </svg>
+      <span>Acceso Staff</span>
     </button>
 
     <!-- Content wrapper -->
@@ -50,7 +50,6 @@ function handleSelect(type) {
             <BrandHeader />
           </div>
         </div>
-
 
         <!-- Question -->
         <div class="mt-14 text-center">

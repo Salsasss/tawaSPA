@@ -41,7 +41,7 @@ defineProps({
     <footer class="mx-auto max-w-6xl px-6 pb-6">
       <div class="flex items-center justify-between text-xs text-text-muted">
         <div>© 2026 Mariscos Tawa. Todos los derechos reservados.</div>
-        <div>Horario: 9:00am - 6:00pm</div>
+        <div>Horario: 9:00 am - 6:00 pm</div>
       </div>
     </footer>
   </div>

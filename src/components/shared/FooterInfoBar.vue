@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
-  leftText: { type: String, default: "Horario: 9:00am - 6:00pm" },
-  rightText: { type: String, default: "Pago en efectivo y tarjeta" },
+  leftText: { type: String, default: "Horario: 9:00 am - 6:00 pm" },
+  rightText: { type: String, default: "Aceptamos efectivo, tarjeta y transferencia" },
 });
 </script>
 
