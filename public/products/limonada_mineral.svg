@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-limonada" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0ffff"/>
+      <stop offset="100%" stop-color="#bbf3f9"/>
+    </radialGradient>
+    <linearGradient id="glass-shading" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#aae8f0" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="shadow-limonada" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#194c54" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-limonada)"/>
+  <!-- Tall Glass Body -->
+  <!-- Back liquid -->
+  <path d="M 75,60 L 125,60 L 118,155 L 82,155 Z" fill="#e8fdff" opacity="0.8" filter="url(#shadow-limonada)"/>
+  <!-- Sparkling bubbles -->
+  <circle cx="88" cy="85" r="2.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="95" cy="115" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="112" cy="95" r="3" fill="#ffffff" opacity="0.6"/>
+  <circle cx="104" cy="75" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="85" cy="135" r="3" fill="#ffffff" opacity="0.6"/>
+  <circle cx="110" cy="125" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="100" cy="140" r="2.5" fill="#ffffff" opacity="0.7"/>
+  <!-- Ice Cubes inside -->
+  <rect x="85" y="90" width="20" height="20" rx="3" transform="rotate(15, 95, 100)" fill="#ffffff" opacity="0.5"/>
+  <rect x="98" y="115" width="18" height="18" rx="3" transform="rotate(-10, 107, 124)" fill="#ffffff" opacity="0.5"/>
+  <!-- Lemon slices floating inside -->
+  <circle cx="90" cy="110" r="12" fill="#d2f238" opacity="0.8"/>
+  <circle cx="90" cy="110" r="10.5" fill="#fffbbf" opacity="0.9"/>
+  <circle cx="110" cy="80" r="13" fill="#d2f238" opacity="0.8"/>
+  <circle cx="110" cy="80" r="11.5" fill="#fffbbf" opacity="0.9"/>
+  <!-- Glass Rim & Front Glass Highlights -->
+  <path d="M 75,60 L 125,60 L 118,155 L 82,155 Z" fill="url(#glass-shading)" opacity="0.4"/>
+  <!-- Outer glass borders -->
+  <path d="M 75,60 L 82,155 C 82,157 84,158 86,158 L 114,158 C 116,158 118,157 118,155 L 125,60" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.7"/>
+  <!-- Lemon Slice on Rim -->
+  <path d="M 68,60 C 68,45 83,45 83,60 C 83,75 68,75 68,60 Z" fill="#d2f238" filter="url(#shadow-limonada)" transform="rotate(-20, 75, 60)"/>
+  <path d="M 70,60 C 70,48 81,48 81,60 C 81,72 70,72 70,60 Z" fill="#fffbbf" transform="rotate(-20, 75, 60)"/>
+  <!-- Green Straw -->
+  <path d="M 105,40 L 98,62 L 105,145" fill="none" stroke="#32ad60" stroke-width="4.5" stroke-linecap="round" opacity="0.8"/>
+</svg>

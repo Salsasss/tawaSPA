@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-tresleches" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffafd"/>
+      <stop offset="100%" stop-color="#fce6eb"/>
+    </radialGradient>
+    <linearGradient id="cake-crumb-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff2cc"/>
+      <stop offset="100%" stop-color="#e8cfa0"/>
+    </linearGradient>
+    <filter id="shadow-tresleches" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#8c4155" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-tresleches)"/>
+  <!-- Elegant Plate -->
+  <circle cx="100" cy="100" r="72" fill="#ffffff" filter="url(#shadow-tresleches)"/>
+  <!-- Perspective Cake Slice -->
+  <!-- Cake Base & Sponge -->
+  <path d="M 55,115 L 115,128 L 145,95 L 145,65 L 115,98 L 55,85 Z" fill="url(#cake-crumb-grad)" filter="url(#shadow-tresleches)"/>
+  <!-- Frosting on the Back Side -->
+  <path d="M 115,128 L 145,95 L 145,65 L 115,98 Z" fill="#ffffff" opacity="0.95"/>
+  <!-- Cream Layers in between Sponge -->
+  <path d="M 55,100 Q 85,108 115,113" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 55,85 Q 85,93 115,98 L 145,65" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <!-- Top Frosting -->
+  <path d="M 55,85 L 115,98 L 95,58 L 50,75 Z" fill="#ffffff" opacity="0.95"/>
+  <!-- Cream peaks details -->
+  <path d="M 52,80 Q 75,70 95,85 Q 115,75 130,90" fill="none" stroke="#ffedf3" stroke-width="2"/>
+  <!-- Whipped cream dollop on top -->
+  <circle cx="105" cy="72" r="10" fill="#ffffff" filter="url(#shadow-tresleches)"/>
+  <circle cx="107" cy="70" r="7" fill="#fff5fa"/>
+  <!-- Glossy Red Cherry -->
+  <circle cx="105" cy="58" r="8.5" fill="#d40d34" filter="url(#shadow-tresleches)"/>
+  <circle cx="102" cy="55" r="3" fill="#ff7593" opacity="0.8"/>
+  <!-- Cherry Stem -->
+  <path d="M 105,53 Q 115,38 124,36" fill="none" stroke="#4f381c" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Milk droplets (Tres Leches drip) -->
+  <path d="M 105,122 C 105,128 108,130 110,130 C 112,130 115,128 115,122 Z" fill="#fffef5" filter="url(#shadow-tresleches)"/>
+  <path d="M 75,116 C 75,123 78,125 80,125 C 82,125 85,123 85,116 Z" fill="#fffef5" filter="url(#shadow-tresleches)"/>
+</svg>

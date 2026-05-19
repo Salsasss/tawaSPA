@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-quesadilla" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffdf5"/>
+      <stop offset="100%" stop-color="#ffeac2"/>
+    </radialGradient>
+    <linearGradient id="tortilla-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd984"/>
+      <stop offset="60%" stop-color="#e8a83f"/>
+      <stop offset="100%" stop-color="#ba7510"/>
+    </linearGradient>
+    <filter id="shadow-quesadilla" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#734e19" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-quesadilla)"/>
+  <!-- Premium plate -->
+  <circle cx="100" cy="100" r="72" fill="#ffffff" filter="url(#shadow-quesadilla)"/>
+  <circle cx="100" cy="100" r="62" fill="none" stroke="#fcf6e8" stroke-width="2"/>
+  <!-- Quesadilla Folded (Tortilla) -->
+  <path d="M 45,115 C 45,65 95,45 145,75 C 150,115 130,135 110,135 C 75,135 45,125 45,115 Z" fill="url(#tortilla-grad)" filter="url(#shadow-quesadilla)"/>
+  <!-- Toasting brown spots -->
+  <circle cx="70" cy="95" r="4.5" fill="#6e3d03" opacity="0.4"/>
+  <circle cx="95" cy="80" r="3" fill="#6e3d03" opacity="0.4"/>
+  <circle cx="120" cy="90" r="5" fill="#6e3d03" opacity="0.4"/>
+  <circle cx="85" cy="115" r="3.5" fill="#6e3d03" opacity="0.4"/>
+  <!-- Cheesy pull / Cheese showing -->
+  <path d="M 46,115 C 50,113 70,118 85,116 C 110,113 130,118 135,110 C 137,113 133,122 120,123 C 90,124 55,123 46,115 Z" fill="#fffbe6" filter="url(#shadow-quesadilla)"/>
+  <!-- Juicy grilled pink Shrimps peeking out -->
+  <!-- Shrimp 1 -->
+  <path d="M 68,110 C 66,105 72,98 78,98 C 84,98 86,104 84,108 C 82,112 76,112 74,108" fill="none" stroke="#ff8f8f" stroke-width="6" stroke-linecap="round" filter="url(#shadow-quesadilla)"/>
+  <path d="M 68,110 C 66,105 72,98 78,98" fill="none" stroke="#ff5c5c" stroke-width="2" stroke-linecap="round"/>
+  <!-- Shrimp 2 -->
+  <path d="M 105,108 C 103,103 109,96 115,96 C 121,96 123,102 121,106 C 119,110 113,110 111,106" fill="none" stroke="#ff8f8f" stroke-width="6" stroke-linecap="round" filter="url(#shadow-quesadilla)"/>
+  <path d="M 105,108 C 103,103 109,96 115,96" fill="none" stroke="#ff5c5c" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cheese pulls / threads -->
+  <path d="M 62,114 C 65,119 75,119 78,115" fill="none" stroke="#fffce0" stroke-width="2"/>
+  <path d="M 98,113 C 102,118 112,117 115,113" fill="none" stroke="#fffce0" stroke-width="2"/>
+  <!-- Cilantro garnish inside -->
+  <circle cx="88" cy="112" r="3" fill="#2d8736"/>
+  <circle cx="118" cy="108" r="2.5" fill="#2d8736"/>
+</svg>

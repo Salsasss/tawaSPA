@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-flan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8f0"/>
+      <stop offset="100%" stop-color="#ffe6ca"/>
+    </radialGradient>
+    <linearGradient id="custard-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff0c2"/>
+      <stop offset="60%" stop-color="#fcd888"/>
+      <stop offset="100%" stop-color="#cf9c34"/>
+    </linearGradient>
+    <linearGradient id="caramel-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b85f09"/>
+      <stop offset="100%" stop-color="#692d00"/>
+    </linearGradient>
+    <filter id="shadow-flan" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#593c15" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-flan)"/>
+  <!-- Premium plate -->
+  <circle cx="100" cy="100" r="72" fill="#ffffff" filter="url(#shadow-flan)"/>
+  <!-- Caramel pool (Salsa de caramelo) -->
+  <ellipse cx="100" cy="120" rx="55" ry="18" fill="url(#caramel-grad)" filter="url(#shadow-flan)"/>
+  <!-- Flan Body (Custard Dome) -->
+  <path d="M 68,118 C 65,118 63,115 65,110 L 76,82 C 78,77 82,75 88,75 L 112,75 C 118,75 122,77 124,82 L 135,110 C 137,115 135,118 132,118 Z" fill="url(#custard-grad)" filter="url(#shadow-flan)"/>
+  <!-- Dark Caramel Top Layer -->
+  <ellipse cx="100" cy="78" rx="20" ry="6" fill="#8f4503"/>
+  <!-- Drips of caramel down sides -->
+  <path d="M 86,77 C 88,88 83,95 84,105 C 85,108 89,108 89,105 C 88,95 92,88 90,77 Z" fill="#8f4503"/>
+  <path d="M 112,77 C 110,88 114,97 112,108 C 111,111 107,111 107,108 C 109,97 107,88 109,77 Z" fill="#8f4503"/>
+  <!-- Highlight / Sheen -->
+  <ellipse cx="100" cy="76" rx="16" ry="4" fill="#faaa5c" opacity="0.4"/>
+  <!-- Mint leaf garnish -->
+  <path d="M 98,72 Q 88,68 90,60 Q 98,62 98,72 Z" fill="#2d8a41" filter="url(#shadow-flan)"/>
+  <path d="M 102,72 Q 112,68 110,60 Q 102,62 102,72 Z" fill="#2d8a41" filter="url(#shadow-flan)"/>
+</svg>

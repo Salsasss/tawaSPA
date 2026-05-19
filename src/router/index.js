@@ -8,6 +8,7 @@ const router = createRouter({
 
     // ── Consumer flow ──
     { path: "/welcome", name: "welcome", component: () => import("@/views/WelcomeView.vue") },
+    { path: "/about", name: "about", component: () => import("@/views/AboutView.vue") },
     { path: "/menu", name: "menu", component: () => import("@/views/FoodMenuView.vue") },
     { path: "/summary", name: "summary", component: () => import("@/views/SummaryView.vue") },
     { path: "/payment", name: "payment", component: () => import("@/views/PaymentView.vue") },

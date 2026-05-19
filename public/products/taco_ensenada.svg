@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-ensenada" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5fbff"/>
+      <stop offset="100%" stop-color="#cfe9ff"/>
+    </radialGradient>
+    <linearGradient id="batter-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd27d"/>
+      <stop offset="70%" stop-color="#d48c28"/>
+      <stop offset="100%" stop-color="#995805"/>
+    </linearGradient>
+    <filter id="shadow-ensenada" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#1b3f5c" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-ensenada)"/>
+  <!-- Premium plate -->
+  <circle cx="100" cy="100" r="72" fill="#ffffff" filter="url(#shadow-ensenada)"/>
+  <!-- Taco Shell (Folded Corn Tortilla) -->
+  <path d="M 50,130 C 45,95 65,65 110,65 C 135,65 155,85 150,120 C 145,130 115,135 100,135 C 70,135 55,135 50,130 Z" fill="#ffe299" filter="url(#shadow-ensenada)"/>
+  <path d="M 55,128 C 50,97 68,69 110,69 C 133,69 150,87 146,118 Z" fill="#ffd166"/>
+  <!-- Battered Fish (Crispy Capeado) -->
+  <rect x="70" y="85" width="60" height="22" rx="8" transform="rotate(-15, 100, 95)" fill="url(#batter-grad)" filter="url(#shadow-ensenada)"/>
+  <circle cx="80" cy="98" r="1.5" fill="#5c3402" opacity="0.3"/>
+  <circle cx="95" cy="90" r="2" fill="#5c3402" opacity="0.3"/>
+  <circle cx="115" cy="85" r="1.5" fill="#5c3402" opacity="0.3"/>
+  <!-- Purple Cabbage (Col Morada) -->
+  <path d="M 72,82 C 70,80 68,90 71,95" fill="none" stroke="#7d124c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 85,75 C 82,72 80,85 86,92" fill="none" stroke="#9e1862" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 100,72 C 98,68 96,82 102,88" fill="none" stroke="#7d124c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 112,74 C 110,70 108,80 115,86" fill="none" stroke="#9e1862" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 125,78 C 122,75 120,88 126,94" fill="none" stroke="#7d124c" stroke-width="3" stroke-linecap="round"/>
+  <!-- Fresh Cilantro Leaves -->
+  <circle cx="75" cy="90" r="3" fill="#2d8736"/>
+  <circle cx="95" cy="82" r="3.5" fill="#2d8736"/>
+  <circle cx="118" cy="80" r="3" fill="#2d8736"/>
+  <!-- Crema Drizzle (Zigzag Crema) -->
+  <path d="M 68,102 Q 80,80 92,98 Q 105,75 118,92 Q 130,70 142,88" fill="none" stroke="#fffff2" stroke-width="4.5" stroke-linecap="round" filter="url(#shadow-ensenada)"/>
+  <path d="M 68,102 Q 80,80 92,98 Q 105,75 118,92 Q 130,70 142,88" fill="none" stroke="#fffff2" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Lime on Plate -->
+  <path d="M 125,125 Q 140,110 155,130 Q 145,145 125,125 Z" fill="#329e41" filter="url(#shadow-ensenada)"/>
+  <path d="M 128,127 Q 138,115 150,131 Q 142,140 128,127 Z" fill="#a3f7ad"/>
+</svg>

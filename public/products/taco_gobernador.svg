@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-gobernador" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8f2"/>
+      <stop offset="100%" stop-color="#ffdcb5"/>
+    </radialGradient>
+    <linearGradient id="tortilla-grilled" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe4a0"/>
+      <stop offset="60%" stop-color="#e39a34"/>
+      <stop offset="100%" stop-color="#ad6810"/>
+    </linearGradient>
+    <filter id="shadow-gobernador" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#543105" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-gobernador)"/>
+  <!-- Premium plate -->
+  <circle cx="100" cy="100" r="72" fill="#ffffff" filter="url(#shadow-gobernador)"/>
+  <!-- Folded grilled tortilla -->
+  <path d="M 48,124 C 45,90 65,60 110,60 C 135,60 155,80 150,115 C 145,124 115,130 100,130 C 70,130 52,130 48,124 Z" fill="url(#tortilla-grilled)" filter="url(#shadow-gobernador)"/>
+  <!-- Charred grill marks -->
+  <path d="M 68,90 Q 72,92 78,85" fill="none" stroke="#4a2702" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 85,108 Q 90,110 98,102" fill="none" stroke="#4a2702" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 105,82 Q 110,85 116,78" fill="none" stroke="#4a2702" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 120,105 Q 124,107 130,98" fill="none" stroke="#4a2702" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <!-- Melted cheese strings showing -->
+  <path d="M 49,122 C 55,118 75,121 95,118 C 120,115 138,120 144,110 C 140,123 115,126 95,126 C 68,126 53,126 49,122 Z" fill="#fff9db" filter="url(#shadow-gobernador)"/>
+  <!-- Sautéed Green Peppers & Onions (Rajas y Cebolla) -->
+  <path d="M 68,96 Q 74,90 85,98" fill="none" stroke="#37873e" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 102,94 Q 112,85 120,95" fill="none" stroke="#37873e" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 80,82 Q 88,88 95,78" fill="none" stroke="#e8e8e8" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+  <!-- Grilled Shrimp (Camarones Guisados) -->
+  <path d="M 78,104 C 76,99 82,92 88,92 C 94,92 96,98 94,102 C 92,106 86,106 84,102" fill="none" stroke="#ff9e9e" stroke-width="6" stroke-linecap="round" filter="url(#shadow-gobernador)"/>
+  <path d="M 78,104 C 76,99 82,92 88,92" fill="none" stroke="#e65555" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 112,102 C 110,97 116,90 122,90 C 128,90 130,96 128,100 C 126,104 120,104 118,100" fill="none" stroke="#ff9e9e" stroke-width="6" stroke-linecap="round" filter="url(#shadow-gobernador)"/>
+  <path d="M 112,102 C 110,97 116,90 122,90" fill="none" stroke="#e65555" stroke-width="2" stroke-linecap="round"/>
+</svg>

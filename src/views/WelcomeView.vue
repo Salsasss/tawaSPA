@@ -31,6 +31,22 @@ function handleSelect(type) {
       <span>Acceso Staff</span>
     </button>
 
+    <!-- "Sobre nosotros" button (bottom-right) -->
+    <button
+      type="button"
+      class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-md transition hover:bg-slate-50 hover:scale-105 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+      aria-label="Sobre nosotros"
+      @click="router.push('/about')"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-4.5 w-4.5">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+      <span>Sobre nosotros</span>
+    </button>
+
     <!-- Content wrapper -->
     <div class="relative mx-auto max-w-5xl px-4 py-8">
       <!-- Main card/surface -->

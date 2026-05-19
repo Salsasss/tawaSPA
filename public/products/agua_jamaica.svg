@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad-jamaica" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff0f3"/>
+      <stop offset="100%" stop-color="#ffb8c6"/>
+    </radialGradient>
+    <linearGradient id="jamaica-liquid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ab0c2e"/>
+      <stop offset="50%" stop-color="#7a031b"/>
+      <stop offset="100%" stop-color="#4a000d"/>
+    </linearGradient>
+    <linearGradient id="glass-shading" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadow-jamaica" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#40000a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bg-grad-jamaica)"/>
+  <!-- Tall Glass liquid -->
+  <path d="M 75,60 L 125,60 L 118,155 L 82,155 Z" fill="url(#jamaica-liquid)" filter="url(#shadow-jamaica)"/>
+  <!-- Glistening Ice Cubes inside -->
+  <rect x="83" y="85" width="22" height="22" rx="4" transform="rotate(25, 94, 96)" fill="#ffffff" opacity="0.25"/>
+  <rect x="98" y="112" width="20" height="20" rx="4" transform="rotate(-15, 108, 122)" fill="#ffffff" opacity="0.25"/>
+  <!-- Mint leaf floating on top -->
+  <path d="M 98,62 Q 88,52 100,50 Q 102,60 98,62 Z" fill="#2e8c3a" filter="url(#shadow-jamaica)"/>
+  <!-- Glass Shading & Highlights -->
+  <path d="M 75,60 L 125,60 L 118,155 L 82,155 Z" fill="url(#glass-shading)" opacity="0.3"/>
+  <path d="M 75,60 L 82,155 C 82,157 84,158 86,158 L 114,158 C 116,158 118,157 118,155 L 125,60" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.6"/>
+  <!-- Hibiscus Flower Silhouette Garnish -->
+  <path d="M 125,115 C 120,105 130,95 135,105 C 145,95 155,105 145,115 C 155,125 145,135 135,125 C 125,135 120,125 125,115 Z" fill="#ab0c2e" opacity="0.25" filter="url(#shadow-jamaica)"/>
+  <!-- Black Straw -->
+  <path d="M 112,40 L 105,62 L 112,145" fill="none" stroke="#1c1c1c" stroke-width="4.5" stroke-linecap="round" opacity="0.8"/>
+</svg>
